@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redmond 2828</title>
+
+
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<script>
+function myFunction() {
+    document.getElementById("toastform").submit();
+}
+</script>
+<body>
+
+  <div class="panel" style="display: block;"name="hold"id="idk">
+  	<h1>Redmond2828</h1>
+    <h2>By Arnav Chawla</h2>
+    <span class="r-version">v2.0.0</span>
+    <h4>Choose a date to get started</h1>
+      <form action="." method="POST" id="toastform" name="toastform" class="post">
+        <select name="date">
+          {% for data in data %}
+            <option value={{data.url}}>{{data.date}}</option>
+          {% endfor %}
+        </select>
+      </form>
+      <li onclick="myFunction()">
+          <span class="label">Download Agenda</span>
+      </li>
+      <!-- <li onclick="ga('send', 'event', 'Download', 'click');">
+      <a download="" href="https://github.com/VincentGarreau/particles.js/archive/master.zip">
+      </a>
+    </li> -->
+
+  </div>
+  <!-- particles.js container --> <div id="particles-js"> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+
+
+
+    <script  src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+
+
+
+
+</body>
+
+</html>
